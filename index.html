@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Casa inteligente alfa</title>
+</head>
+<body class="text-center">
+  <div id="animacion1">
+    <p>Examen parcial 2</p>
+  </div>
+    <div class="border border-primary-subtle">
+      <br>
+    <div class="row" id="botonera">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger rounded-pill" id="Secuencia1" onclick="Secuencia1()">Secuencia 1</button>
+          <button type="button" class="btn btn-warning rounded-pill" id="Secuencia2" onclick="Secuencia2()">Secuencia 2</button>
+          <button type="button" class="btn btn-success rounded-pill" id="Secuencia3" onclick="Secuencia3()">Secuencia 3</button>
+          <button type="button" class="btn btn-info rounded-pill" id="Secuencia4" onclick="Secuencia4()">Secuencia 4</button>
+          <button type="button" class="btn btn-light rounded-pill" id="Secuencia5" onclick="Secuencia5()">Secuencia 5</button>
+        </div>
+        <br><br>
+<div class="row">
+        <span id="Casa">
+            <div class="row">
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led prendido.png" alt="LedE1" style="display: none;" id="LedApagado">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led prendido.png" alt="LedE1" style="display: none;" id="LedApagado">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA1" id="LedA1">
+            <img src="img/Led prendido.png" alt="LedE1" style="display: none;" id="LedE1">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA2" id="LedA2">
+            <img src="img/Led prendido.png" alt="LedE2" style="display: none;" id="LedE2">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA3" id="LedA3">
+            <img src="img/Led prendido.png" alt="LedE3" style="display: none;" id="LedE3">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA4" id="LedA4">
+            <img src="img/Led prendido.png" alt="LedE4" style="display: none;" id="LedE4">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA5" id="LedA5">
+            <img src="img/Led prendido.png" alt="LedE5" style="display: none;" id="LedE5">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA6" id="LedA6">
+            <img src="img/Led prendido.png" alt="LedE6" style="display: none;" id="LedE6">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA7" id="LedA7">
+            <img src="img/Led prendido.png" alt="LedE7" style="display: none;" id="LedE7">
+            </div>
+            <div class="col-1 xs-col. sm-col.">
+            <img src="img/Led apagado.png" alt="LedA8" id="LedA8">
+            <img src="img/Led prendido.png" alt="LedE8" style="display: none;" id="LedE8">
+            </div>
+            </div>
+            <div class="input-group mb-3">
+            <button class="btn btn-outline-success" type="button" id="botonBinario" onclick="Binario()">Enviar</button>
+            <input type="text" id="valorDecimal" class="form-control text-center" placeholder="Ingresa un valor decimal del 0 al 255" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+            <div class="btn-group col-6 xs-col. sm-col." role="group" aria-label="Basic mixed styles example">
+              <button type="button" class="btn btn-primary rounded-pill col-4" id="Detener" onclick="Reset()">Detener</button>
+            </div>
+            <h1 id="resultado"></h1>
+        </span>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+    var valorSecuencia = 0;
+    var valorDecimal = document.getElementById("valorDecimal");
+    var dato;
+    $(function(){
+    $("#Secuencia1").click(function(){
+      $("#animacion1").css({
+        'font-family':'GodOfWar',
+        'color':'red',
+        'webkit-text-stroke':'1.5px black'
+      })
+      $("#botonBinario").hide();
+      $("#valorDecimal").hide();
+      valorSecuencia = 1;
+      console.log(valorSecuencia);
+    });
+    $("#Secuencia2").click(function(){
+      $("#animacion1").css({
+        'font-family':'Gears',
+        'color':'blue',
+        'webkit-text-stroke':'1.5px black'
+      });
+      $("#botonBinario").hide();
+      $("#valorDecimal").hide();
+      valorSecuencia = 2;
+      console.log(valorSecuencia);
+    });
+    $("#Secuencia3").click(function(){
+      $("#animacion1").css({
+        'font-family':'Habbo',
+        'color':'yellow',
+        'font-size':'50px'
+      });
+      $("#botonBinario").hide();
+      $("#valorDecimal").hide();
+      valorSecuencia = 3;
+      console.log(valorSecuencia);
+    });
+    $("#Secuencia4").click(function(){
+      $("#animacion1").css({
+        'font-family':'Sega',
+        'color':'blue',
+        'webkit-text-stroke':'2px white'
+      });
+      $("#botonBinario").hide();
+      $("#valorDecimal").hide();
+      valorSecuencia = 4;
+      console.log(valorSecuencia);
+    });
+    $("#Secuencia5").click(function(){
+      $("#animacion1").css({
+        'font-family':'Halo',
+        'color':'blue',
+        'webkit-text-stroke':'1px black'
+      });
+      $("#botonBinario").hide();
+      $("#valorDecimal").hide();
+      valorSecuencia = 5;
+      console.log(valorSecuencia);
+    });
+    $("#Detener").click(function(){
+      $("#animacion1").css({
+        'font-family':'Star',
+        'color':'yellow',
+        'webkit-text-stroke':'1px black'
+      });
+      $("#botonBinario").show();
+      $("#valorDecimal").show();
+      valorSecuencia = 6;
+      console.log(valorSecuencia);
+    });
+    $("#botonBinario").click(function(){
+      dato = valorDecimal.value;
+      console.log(dato);
+    });
+    $(this).click(function(){
+      $.ajax({
+          data:{valor: valorSecuencia, datoDecimal: dato},
+          url:'datos.php',
+          type:'POST',
+          success: function(result){
+          }
+      });
+    });
+  });
+</script>
+<script src="main.js"></script>
+</body>
+</html>

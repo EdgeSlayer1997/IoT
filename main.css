@@ -1,0 +1,45 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #44A08D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#botonera
+{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#Casa img
+{
+    height: 100px;
+    width: 100px;
+}
+p
+{
+    font-size: 50px;
+}
+@font-face {
+    font-family: GodOfWar;
+    src: url(fonts/GODOFWAR.TTF);
+}
+@font-face {
+    font-family: Gears;
+    src: url(fonts/asgears2.ttf);
+}
+@font-face {
+    font-family: Habbo;
+    src: url(fonts/HabboFont.ttf);
+}
+@font-face {
+    font-family: Sega;
+    src: url(fonts/SEGA.TTF);
+}
+@font-face {
+    font-family: Halo;
+    src: url(fonts/Halo.ttf);
+}
+@font-face {
+    font-family: Star;
+    src: url(fonts/STJEDISE.TTF);
+}
